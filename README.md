@@ -24,7 +24,7 @@ Once ran it performs the following:
 2. Network interface to monitor traffic (may need to mirror ports or put in promiscious mode)
 3. Internet access for WHOIS requests
 4. A running Splunk instance with HEC forwarding enabled
-5. splunk_token.txt file containing only the HEC token from Splunk (you can change the index from main to something else if prefered in the send_to_splunk.py file)
+5. splunk_token.txt file in the same directory as main.py containing only the HEC token from Splunk (you can change the index from main to something else if prefered in the send_to_splunk.py file)
 
 # Splunk Event Fields
 * domain_queried - (full domain string that was captured on the interface)
