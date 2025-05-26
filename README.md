@@ -10,7 +10,7 @@ This program runs within a docker container and requires the container to have R
 Once ran it performs the following:
 1. Listens to all traffic on a specified network interface (prompts the user to choose which interface is the monitor interface)
 2. Captures only DNS requests and feeds them each to a multithreaded function to handle each domain seperately
-### new thread spawned
+###### new thread spawned
 3. Checks the local SQLLite database if the domain has been seen before
      IF YES: no action needed - thread terminates
      IF NO: Move on to step 4 below
