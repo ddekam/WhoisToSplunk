@@ -27,28 +27,28 @@ Once ran it performs the following:
 5. splunk_token.txt file containing only the HEC token from Splunk (you can change the index from main to something else if prefered in the send_to_splunk.py file)
 
 # Splunk Event Fields
-domain_queried - (full domain string that was captured on the interface)
-domain_name - (domain that WHOIS returned)
-registrar  
-registrar_url  
-yearfirst  
-dayfirst  
-creation_date  
-updated_date  
-expiration_date  
-name_servers  
-status  
-emails  
-whois_server  
-reseller  
-dnssec  
-name  
-org  
-address  
-city  
-state  
-zipcode  
-country  
+* domain_queried - (full domain string that was captured on the interface)
+* domain_name - (domain that WHOIS returned)
+* registrar  
+* registrar_url  
+* yearfirst  
+* dayfirst  
+* creation_date  
+* updated_date  
+* expiration_date  
+* name_servers  
+* status  
+* emails  
+* whois_server  
+* reseller  
+* dnssec  
+* name  
+* org  
+* address  
+* city  
+* state  
+* zipcode  
+* country  
 
 ## Known Issues
 There can be occasional duplicate events in Splunk when a two larger subdomains return the same WHOIS information catagorized for the shared domain. For example two different domains of <random_characters>.azure.com may exist but both may just return the same WHOIS for azure.com. This isn't the case for all subdomains but I'm working to see which of these are edge cases and which are not. There is a fix by storing the WHOIS domains in the local database to check whether they exist prior to sending to Splunk, however this would increase the number of WHOIS requests which would not be ideal since the database check prior does lower the rate of WHOIS traffic required as the database grows.
