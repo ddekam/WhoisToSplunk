@@ -21,6 +21,7 @@ Once ran it performs the following:
 
 # Splunk Event Fields
 domain_queried - (full domain string that was captured on the interface)
+
 domain_name - (domain that WHOIS returned)
 registrar  
 registrar_url  
