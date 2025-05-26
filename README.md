@@ -5,7 +5,10 @@ This Python based application sends to Splunk domain registration information of
 A large majority of malicious domains were recently purchased, bought on cheaper and less reputable registrars (namecheap, namesilo, etc.), have anonomized contact information, an address that doesn't really exist, etc. All of that can be observed by analyzing the domain registration information. This tool provides you with the data you need to hunt for any of those suspicious attributes and more.
 
 # How it works
-1. Listens to all traffic on a specified network interface
+This program runs within a docker container and requires the container to have ROOT or SUDO privilages for network interface access
+
+Once ran it performs the following:
+1. Listens to all traffic on a specified network interface (prompts the user to choose which interface is the monitor interface)
 2. Captures only DNS requests and feeds them each to a multithreaded function to handle each domain seperately
 ### new thread spawned
 3. Checks the local SQLLite database if the domain has been seen before
