@@ -1,5 +1,5 @@
 # WhoisToSplunk
-This Python based application sends to Splunk domain registration information of domains visited on your network. Building an enriched database of information on domains in your network activity expands capability and vectors that can be used for threat hunting and analysis. 
+This Python based application sends to Splunk domain registration information of domains visited on your network. Building an enriched database of information on domains in your network activity expands capability and vectors that can be used for enhanced threat hunting and analysis. 
 
 # Spotting Evil With This Tool
 A large majority of malicious domains were recently purchased, bought on cheaper and less reputable registrars (namecheap, namesilo, etc.), have anonomized contact information, an address that doesn't really exist, etc. All of that can be observed by analyzing the domain registration information. This tool provides you with the data you need to hunt for any of those suspicious attributes and more.
